@@ -5,6 +5,6 @@ export interface Project{
     uploader: string;
     externalLink: string;
     likes: number;
-    uploadDate: Date;
+    uploadDate: string;
     collaborators: number;
 }

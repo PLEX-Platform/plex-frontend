@@ -8,7 +8,7 @@ export const Projects: Project[] = [
     uploader: `Mees van straten`,
     externalLink: `https://github.com/MeesvanStraten/Smart_mirror_project-master`,
     likes: 2,
-    uploadDate: new Date(2020-10-30),
+    uploadDate: `Oct 30, 2020`,
     collaborators: 2
 },
 {
@@ -18,7 +18,7 @@ export const Projects: Project[] = [
     uploader: `Patrick de Beer`,
     externalLink: `https://github.com/MeesvanStraten/Smart_mirror_project-master`,
     likes: 2,
-    uploadDate: new Date(2020-10-30),
+    uploadDate: `Oct 30, 2020`,
     collaborators: 1 
 }
 ];

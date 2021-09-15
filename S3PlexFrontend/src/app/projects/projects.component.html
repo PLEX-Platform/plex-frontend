@@ -2,6 +2,55 @@
 
 <ul class="projects">
   <li *ngFor="let project of projects">
-    <span class="badge">{{project.id}}</span> {{project.name}}
+    <div class="card border border-primary shadow-0 " style="background-color:#ffffff;">
+      <div class="card-header">{{project.name}}</div>
+      <div class="card-body">
+        <p class="card-text">
+          {{project.description}}
+        </p>
+      </div>
+      <div class="card-footer">
+        collaborators: {{project.collaborators}}
+        likes: {{project.likes}}
+        uploader: {{project.uploader}}
+        <span id='date-time'>{{project.uploadDate}}</span> 
+      </div>
+    </div>
   </li>
 </ul>
+
+<!-- <div class="project grid">
+  <div class="project-info">
+    <div class="top-wrapper">
+      <h3 class="project-name">Smart Mirror</h3>
+      <div class="circle"><img alt="projec-icon" loading="lazy" onerror="this.src='/assets/images/placeholder.png';"
+          src="assets/images/placeholder.png"></div>
+    </div>
+    <p class="project-short-description">Smart Mirror is a interactive mirror.</p>
+  </div>
+  <div class="tags">
+    <div class="tag"> UX/UI </div>
+    <div class="tag"> Code </div>
+
+  </div>
+  <div class="bottom-wrapper">
+    <div class="item"><em class="fa-heart far"></em>
+      <div class="project-likes">2 Likes</div>
+    </div>
+    <div class="item">
+<em class="fas fa-users"></em>
+      <div class="project-collaborators">2 collaborators</div>
+    </div>
+
+    <div class="item">
+<em class="far fa-clock"></em>
+      <div class="project-created-date">Oct 30, 2020</div>
+    </div>
+
+    <div class="item"><em class="fa fa-user"></em>
+      <div class="project-user-name">Mees van Straten</div>
+
+    </div>
+
+  </div>
+</div> -->
