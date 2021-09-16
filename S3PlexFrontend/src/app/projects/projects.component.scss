@@ -11,8 +11,8 @@
     transition: transform .25s ease-in-out;
 }
 .card{
-    margin-top:20px;
-    margin-left:20px;
+    margin-top:10px;
+    margin-left:10px;
 }
 
 .bottom-wrapper {
@@ -20,3 +20,24 @@
     grid-template-columns: 4fr 5fr;
     gap: 10px;
 }
+.module { 
+    width: 400px; 
+    margin: 0 0 2em 0; 
+    overflow: hidden; 
+  } 
+  .line-clamp { 
+    display: -webkit-box; 
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;   
+  }
+  .text-description{
+      font-size: 13px;
+      color: rgb(100, 100, 100);
+  }
+  .text-title{
+    font-size: 18px;
+    font-weight: 700
+  }
+  .text-attributes{
+
+  }

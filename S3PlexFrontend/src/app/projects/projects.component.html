@@ -1,31 +1,29 @@
-<h2>My Projects</h2>
-
 <ul class="projects">
   <li *ngFor="let project of projects">
     <div class="card border border-primary shadow-0 " style="background-color:#ffffff;">
-      <div class="card-header">{{project.name}}</div>
+      <div class="card-header text-title">{{project.name}}</div>
       <div class="card-body">
-        <p class="card-text">
+        <p class="card-text module line-clamp text-description">
           {{project.description}}
         </p>
-        <div class="bottom-wrapper">
-          <div class="item">
+        </div>
+        <div class="bottom-wrapper card-footer ">
+          <div class="text-attributes">
             <i class="far fa-heart"></i> {{project.likes}} likes
           </div>
 
-          <div class="item">
+          <div class="text-attributes">
             <i class="fas fa-users"></i> {{project.collaborators}} collaborators
           </div>
 
-          <div class="item">
+          <div class="text-attributes">
             <i class="far fa-clock"></i> {{project.uploadDate}}
           </div>
 
-          <div class="item">
+          <div class="text-attributes">
             <i class="fas fa-user"></i> {{project.uploader}}
           </div>
         </div>
-      </div>
     </div>
   </li>
 </ul>

@@ -6,3 +6,10 @@
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "~@fortawesome/fontawesome-free/scss/solid.scss"; 
 @import "~@fortawesome/fontawesome-free/scss/regular.scss";
+
+/*importing font*/
+@import "https://fonts.googleapis.com/css?family=Montserrat:500,700";
+
+.html {
+  font-family: 'Montserrat';
+}
