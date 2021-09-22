@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+<h2>My Projects</h2>
+
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+        class="d-inline-block align-text-top">
+      Bootstrap
+    </a>
+  </div>
+</nav>
+
+=======
+>>>>>>> 4c069b4aa2f8316c1c278fdccc75bf5c396ef812
 <ul class="projects">
   <li *ngFor="let project of projects">
     <div class="card border border-primary shadow-0 " style="background-color:#ffffff;">
@@ -6,6 +21,21 @@
         <p class="card-text module line-clamp text-description">
           {{project.shortDescription}}
         </p>
+<<<<<<< HEAD
+      </div>
+      <div class="card-footer">
+        collaborators: {{project.collaborators}}
+        <div class="item">
+          <i-bs name="heart" width="75" height="75">
+          </i-bs>
+          <div class="project-likes">{{project.likes}}</div>
+        </div>
+
+
+        uploader: {{project.uploader}}
+        <span id='date-time'>{{project.uploadDate}}</span>
+      </div>
+=======
         </div>
         <div class="bottom-wrapper card-footer ">
           <div class="text-attributes">
@@ -26,6 +56,7 @@
             <i class="fas fa-user"></i> {{project.user.name}}
           </div>
         </div>
+>>>>>>> 4c069b4aa2f8316c1c278fdccc75bf5c396ef812
     </div>
   </li>
   <button *ngIf = "(page > 1)" [disabled] = "false" (click)="onPrevious()">Previous</button>
