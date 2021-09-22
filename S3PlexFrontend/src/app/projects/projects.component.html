@@ -9,11 +9,13 @@
         </div>
         <div class="bottom-wrapper card-footer ">
           <div class="text-attributes">
-            <i class="far fa-heart"></i> {{project.likes}} likes
+            <i class="far fa-heart"></i> {{project.likes.length}}
           </div>
 
           <div class="text-attributes">
-            <i class="fas fa-users"></i> {{project.collaborators}} collaborators
+            <li *ngFor="let collaborator of project.collaborators">
+            <i class="fas fa-users"></i> {{collaborator.fullName}}
+          </li>
           </div>
 
           <div class="text-attributes">
@@ -21,7 +23,7 @@
           </div>
 
           <div class="text-attributes">
-            <i class="fas fa-user"></i> {{project.uploader}}
+            <i class="fas fa-user"></i> {{project.user.name}}
           </div>
         </div>
     </div>

@@ -1,11 +1,19 @@
+import {Collaborator} from './collaborator';
+import { projectuploader } from './projectuploader';
+import {like} from './like';
+import { categorie } from './categorie';
+import { projecticon } from './projecticon';
+
 export interface Project{
     id: number;
     name: string;
     shortDescription: string;
-    uploader: string;
+    user: projectuploader;
     externalLink: string;
-    likes: number;
+    likes: like[];
+    categories: categorie[];
+    projectIcon: projecticon;
     created: string;
     updated: string;
-    collaborators: number;
+    collaborators: Collaborator[];
 }
