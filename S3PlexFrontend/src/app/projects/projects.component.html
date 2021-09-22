@@ -1,5 +1,15 @@
 <h2>My Projects</h2>
 
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+        class="d-inline-block align-text-top">
+      Bootstrap
+    </a>
+  </div>
+</nav>
+
 <ul class="projects">
   <li *ngFor="let project of projects">
     <div class="card border border-primary shadow-0 " style="background-color:#ffffff;">
@@ -11,9 +21,15 @@
       </div>
       <div class="card-footer">
         collaborators: {{project.collaborators}}
-        likes: {{project.likes}}
+        <div class="item">
+          <i-bs name="heart" width="75" height="75">
+          </i-bs>
+          <div class="project-likes">{{project.likes}}</div>
+        </div>
+
+
         uploader: {{project.uploader}}
-        <span id='date-time'>{{project.uploadDate}}</span> 
+        <span id='date-time'>{{project.uploadDate}}</span>
       </div>
     </div>
   </li>
