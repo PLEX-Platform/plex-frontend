@@ -18,7 +18,7 @@ export class ProjectService {
 
   constructor(private http: HttpClient) { }
 
-  getProjects(): Observable<ProjectList> {
-    return this.http.get<ProjectList>(this.DEXUrl);
+  getProjectsByPage(page : number): Observable<ProjectList> {
+    return this.http.get<ProjectList>(this.DEXUrl + '?page=' + page.toString());
   }
 }

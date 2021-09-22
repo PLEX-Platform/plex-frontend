@@ -28,6 +28,9 @@
         </div>
     </div>
   </li>
+  <button *ngIf = "(page > 1)" [disabled] = "false" (click)="onPrevious()">Previous</button>
+  <!-- <button (click)="onNext()">Next</button> -->
+  <button *ngIf = "(page < totalpages)" [disabled] = "false" (click)="onNext()">Next</button>
 </ul>
 
 <!-- <div class="project grid">
