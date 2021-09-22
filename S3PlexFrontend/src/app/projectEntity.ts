@@ -1,12 +1,13 @@
-import {Collaborator} from './collaborator';
+import { collaborator } from './collaborator';
 import { projectuploader } from './projectuploader';
-import {like} from './like';
+import { like } from './like';
 import { categorie } from './categorie';
 import { projecticon } from './projecticon';
 
 export interface Project{
     id: number;
     name: string;
+    description: string;
     shortDescription: string;
     user: projectuploader;
     externalLink: string;
@@ -15,5 +16,5 @@ export interface Project{
     projectIcon: projecticon;
     created: string;
     updated: string;
-    collaborators: Collaborator[];
+    collaborators: collaborator[];
 }

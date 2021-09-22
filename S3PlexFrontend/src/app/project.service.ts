@@ -4,14 +4,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
-import { Project } from './projectEntity';
 import {ProjectList} from './ProjectList';
 
 
 @Injectable({ providedIn: 'root' })
 export class ProjectService {
 
-  private DEXUrl = 'https://localhost:5001/api/project';  // URL to web api
+  private DEXUrl = 'https://localhost:5001/api/project';  // URL to DEX web api
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -19,7 +18,6 @@ export class ProjectService {
 
   constructor(private http: HttpClient) { }
 
-  /** GET heroes from the server */
   getProjects(): Observable<ProjectList> {
     return this.http.get<ProjectList>(this.DEXUrl);
   }
