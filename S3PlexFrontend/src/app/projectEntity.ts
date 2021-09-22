@@ -1,10 +1,11 @@
 export interface Project{
     id: number;
     name: string;
-    description: string;
+    shortDescription: string;
     uploader: string;
     externalLink: string;
     likes: number;
-    uploadDate: string;
+    created: string;
+    updated: string;
     collaborators: number;
 }
