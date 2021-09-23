@@ -1,4 +1,4 @@
-import {Project} from './projectEntity';
+import { Project } from './Project';
 
 export interface ProjectList{
     results: Project[];
