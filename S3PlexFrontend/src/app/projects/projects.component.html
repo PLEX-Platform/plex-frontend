@@ -6,65 +6,28 @@
         <p class="card-text module line-clamp text-description">
           {{project.shortDescription}}
         </p>
+      </div>
+      <div class="bottom-wrapper card-footer ">
+        <div class="text-attributes">
+          <i class="far fa-heart"></i> {{project.likes.length}}
         </div>
-        <div class="bottom-wrapper card-footer ">
-          <div class="text-attributes">
-            <i class="far fa-heart"></i> {{project.likes.length}}
-          </div>
 
-          <div class="text-attributes">
-            <li *ngFor="let collaborator of project.collaborators">
+        <div class="text-attributes">
+          <li *ngFor="let collaborator of project.collaborators">
             <i class="fas fa-users"></i> {{collaborator.fullName}}
           </li>
-          </div>
-
-          <div class="text-attributes">
-            <i class="far fa-clock"></i> {{project.created | date}}
-          </div>
-
-          <div class="text-attributes">
-            <i class="fas fa-user"></i> {{project.user.name}}
-          </div>
         </div>
+
+        <div class="text-attributes">
+          <i class="far fa-clock"></i> {{project.created | date}}
+        </div>
+
+        <div class="text-attributes">
+          <i class="fas fa-user"></i> {{project.user.name}}
+        </div>
+      </div>
     </div>
   </li>
-  <button *ngIf = "(page > 1)" [disabled] = "false" (click)="onPrevious()">Previous</button>
-  <!-- <button (click)="onNext()">Next</button> -->
-  <button *ngIf = "(page < projectslist.totalPages)" [disabled] = "false" (click)="onNext()">Next</button>
 </ul>
-
-<!-- <div class="project grid">
-  <div class="project-info">
-    <div class="top-wrapper">
-      <h3 class="project-name">Smart Mirror</h3>
-      <div class="circle"><img alt="projec-icon" loading="lazy" onerror="this.src='/assets/images/placeholder.png';"
-          src="assets/images/placeholder.png"></div>
-    </div>
-    <p class="project-short-description">Smart Mirror is a interactive mirror.</p>
-  </div>
-  <div class="tags">
-    <div class="tag"> UX/UI </div>
-    <div class="tag"> Code </div>
-
-  </div>
-  <div class="bottom-wrapper">
-    <div class="item"><em class="fa-heart far"></em>
-      <div class="project-likes">2 Likes</div>
-    </div>
-    <div class="item">
-<em class="fas fa-users"></em>
-      <div class="project-collaborators">2 collaborators</div>
-    </div>
-
-    <div class="item">
-<em class="far fa-clock"></em>
-      <div class="project-created-date">Oct 30, 2020</div>
-    </div>
-
-    <div class="item"><em class="fa fa-user"></em>
-      <div class="project-user-name">Mees van Straten</div>
-
-    </div>
-
-  </div>
-</div> -->
+<button *ngIf = "(page > 1)" [disabled] = "false" (click)="onPrevious()">Previous</button>
+<button *ngIf = "(page < projectslist.totalPages)" [disabled] = "false" (click)="onNext()">Next</button>
