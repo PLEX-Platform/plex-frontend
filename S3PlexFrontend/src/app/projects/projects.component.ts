@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Project } from '../projectEntity';
 import { ProjectService } from '../project.service';
+import { ProjectList } from '../ProjectList';
 
 @Component({
   selector: 'app-projects',
@@ -10,9 +11,9 @@ import { ProjectService } from '../project.service';
 })
 export class ProjectsComponent implements OnInit {
   
-  projects: Project[] = [];
+  projectslist = {} as ProjectList;
   page: number = 1;
-  totalpages: number = 0;
+  
   constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
@@ -22,10 +23,17 @@ export class ProjectsComponent implements OnInit {
   getProjectsByPage(): void {
     this.projectService.getProjectsByPage(this.page)
     .subscribe((data) => {
-      this.projects = data.results;
-      this.totalpages = data.totalPages;
+      this.projectslist = data;
+      console.log(this.projectslist);
     })
   }
+
+  // getProjectsBySearchQuery(): void{
+  //   this.projectService.getProjectsBySearchQuery()
+  //   .subscribe((data) =>{
+  //     this.projects = data.results;
+  //   })
+  // }
 
   onNext(): void{
     this.page++;
