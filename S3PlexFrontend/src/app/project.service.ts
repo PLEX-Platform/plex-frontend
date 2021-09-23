@@ -19,6 +19,18 @@ export class ProjectService {
   constructor(private http: HttpClient) { }
 
   getProjectsByPage(page : number): Observable<ProjectList> {
-    return this.http.get<ProjectList>(this.DEXUrl + '?page=' + page.toString());
+    return this.http.get<ProjectList>(this.DEXUrl + '?page=' + page.toString() + '&amountOnPage=12');
+  }
+
+  getProjectsWithAmountOnPage(page : number, amountOnPage: number): Observable<ProjectList> {
+    return this.http.get<ProjectList>(this.DEXUrl + '?page=' + page.toString() + '&amountOnPage=' + amountOnPage.toString());
+  }
+
+  getProjectsByCategoryId(categoryId: number, amountOnPage: number): Observable<ProjectList>{
+    return this.http.get<ProjectList>(this.DEXUrl + '?categories=' + categoryId.toString() + '&amountOnPage=' + amountOnPage.toString());
+  }
+
+  getProjectsBySearchQuery(query: string): Observable<ProjectList>{
+    return this.http.get<ProjectList>('https://localhost:5001/api/Search/internal' + query);
   }
 }
