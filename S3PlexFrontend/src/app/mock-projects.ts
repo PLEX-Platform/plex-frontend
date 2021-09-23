@@ -33,12 +33,42 @@ export const Projects: Project[] = [
 },
 {
     id: 1,
-    name: `Extending the Fontys iPost System`,
+    name: `Another Project That I Don't Know A Name For`,
     description: `This project is one of the pilot projects that are part of the "long term projects" we are running with semester 6 and 3 in Tilburg. Besides new functionality you are challenged to deliver a final project with sufficient quality so it can be taken up and extended in a next semester. You have some additional support from teachers, that help you in this challenge.`,
-    uploader: `Patrick de Beer`,
+    uploader: `Steve Jobs`,
     externalLink: `https://dex.software/project/details/147-Extending-the-Fontys-iPost-System`,
-    likes: 4,
-    uploadDate: `Sep 16, 2021`,
-    collaborators: 1
+    likes: 2400,
+    uploadDate: `Jan 16, 2008`,
+    collaborators: 80
+},
+{
+    id: 1,
+    name: `Another Project That I Don't Know A Name For`,
+    description: `This project is one of the pilot projects that are part of the "long term projects" we are running with semester 6 and 3 in Tilburg. Besides new functionality you are challenged to deliver a final project with sufficient quality so it can be taken up and extended in a next semester. You have some additional support from teachers, that help you in this challenge.`,
+    uploader: `Steve Jobs`,
+    externalLink: `https://dex.software/project/details/147-Extending-the-Fontys-iPost-System`,
+    likes: 2400,
+    uploadDate: `Jan 16, 2008`,
+    collaborators: 80
+},
+{
+    id: 1,
+    name: `Another Project That I Don't Know A Name For`,
+    description: `This project is one of the pilot projects that are part of the "long term projects" we are running with semester 6 and 3 in Tilburg. Besides new functionality you are challenged to deliver a final project with sufficient quality so it can be taken up and extended in a next semester. You have some additional support from teachers, that help you in this challenge.`,
+    uploader: `Steve Jobs`,
+    externalLink: `https://dex.software/project/details/147-Extending-the-Fontys-iPost-System`,
+    likes: 2400,
+    uploadDate: `Jan 16, 2008`,
+    collaborators: 80
+},
+{
+    id: 1,
+    name: `Another Project That I Don't Know A Name For`,
+    description: `This project is one of the pilot projects that are part of the "long term projects" we are running with semester 6 and 3 in Tilburg. Besides new functionality you are challenged to deliver a final project with sufficient quality so it can be taken up and extended in a next semester. You have some additional support from teachers, that help you in this challenge.`,
+    uploader: `Steve Jobs`,
+    externalLink: `https://dex.software/project/details/147-Extending-the-Fontys-iPost-System`,
+    likes: 2400,
+    uploadDate: `Jan 16, 2008`,
+    collaborators: 80
 }
 ];
