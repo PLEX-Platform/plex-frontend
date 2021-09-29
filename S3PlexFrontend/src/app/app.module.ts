@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProjectsComponent } from './projects/projects.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectsComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,
