@@ -12,6 +12,7 @@ export class ProjectsComponent implements OnInit {
   
   projectslist = {} as ProjectList;
   page: number = 1;
+  numbers: number[] = [];
   
   constructor(private projectService: ProjectService) { }
 
@@ -24,6 +25,13 @@ export class ProjectsComponent implements OnInit {
     .subscribe((data) => {
       this.projectslist = data;
       console.log(this.projectslist);
+      if(this.numbers.length == 0)
+      {
+        for(let n = 1; n <= this.projectslist.totalPages; n++){
+          this.numbers.push(n);
+        }
+      }
+      console.log(this.numbers);
     })
   }
 
@@ -41,6 +49,11 @@ export class ProjectsComponent implements OnInit {
 
   onPrevious(): void{
     this.page--;
+    this.getProjectsByPage();
+  }
+
+  toPage(pageNo: number): void{
+    this.page = pageNo;
     this.getProjectsByPage();
   }
 }
