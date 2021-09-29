@@ -14,7 +14,7 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
     AppComponent,
     ProjectsComponent,
     NavbarComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
   ],
   imports: [
     BrowserModule,

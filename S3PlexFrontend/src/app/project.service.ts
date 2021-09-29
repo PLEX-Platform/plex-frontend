@@ -5,6 +5,7 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import {ProjectList} from './ProjectList';
+import { Project } from './Project';
 
 
 @Injectable({ providedIn: 'root' })
@@ -21,6 +22,10 @@ export class ProjectService {
   getProjectsByPage(page : number): Observable<ProjectList> {
     return this.http.get<ProjectList>(this.DEXUrl + 'project?page=' + page.toString() + '&amountOnPage=12');
   }
+
+  getProjectById(id: number): Observable<Project> {
+    return this.http.get<Project>(this.DEXUrl + "project/" + id.toString());
+    }
 
   getProjectsWithAmountOnPage(page : number, amountOnPage: number): Observable<ProjectList> {
     return this.http.get<ProjectList>(this.DEXUrl + 'project?page=' + page.toString() + '&amountOnPage=' + amountOnPage.toString());
