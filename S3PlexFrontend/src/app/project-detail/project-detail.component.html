@@ -1,25 +1,3 @@
-<!-- <ng-template #content let-modal></ng-template>
-    <div class="modal-header">
-      <h4 class="modal-title">{{project.name}}</h4>
-      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <p>{{project.description}}&hellip;</p>
-      <p>Uploader: {{project.user.name}}</p>
-      <p>Likes: {{project.likes.length}}</p>
-      <div class="text-attributes">
-        <li *ngFor="let collaborator of project.collaborators">
-            <i class="fas fa-users"></i> {{collaborator.fullName}}
-        </li>
-    </div>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
-    </div>
-  </ng-template> -->
-
   <div class="modal-header">
       <h4 class="modal-title">{{project.name}}</h4>
   </div>
@@ -58,13 +36,16 @@
 
     <div>
       <h4>Description</h4>
-      <p>{{project.description}}&hellip;</p>
+      <p [innerHTML]="project.description"></p>
     </div>
 
-    <h4>Collaborators</h4>
-    <div class="text-attributes" *ngFor="let collaborator of project.collaborators">
-        <i class="fas fa-users"></i> {{collaborator.fullName}}
+    <div *ngIf="project.collaborators.length > 0">
+      <h4>Collaborators</h4>
+      <div class="text-attributes" *ngFor="let collaborator of project.collaborators">
+          <i class="fas fa-users"></i> {{collaborator.fullName}}
+      </div>
     </div>
+
     </div>
   <div class="modal-footer">
 

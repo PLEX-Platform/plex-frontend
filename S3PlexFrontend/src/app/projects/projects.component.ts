@@ -35,13 +35,6 @@ export class ProjectsComponent implements OnInit {
     })
   }
 
-  // getProjectsBySearchQuery(): void{
-  //   this.projectService.getProjectsBySearchQuery()
-  //   .subscribe((data) =>{
-  //     this.projects = data.results;
-  //   })
-  // }
-
   onNext(): void{
     this.page++;
     this.getProjectsByPage();
