@@ -16,4 +16,5 @@ export interface Project{
     created: string;
     updated: string;
     collaborators: collaborator[];
+    uri?: string;
 }

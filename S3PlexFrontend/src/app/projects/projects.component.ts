@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ProjectDetailComponent } from '../project-detail/project-detail.component';
+import { NgbModal, NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
 import { ProjectService } from '../project.service';
 import { ProjectList } from '../ProjectList';
 
@@ -14,7 +15,7 @@ export class ProjectsComponent implements OnInit {
   page: number = 1;
   numbers: number[] = [];
   
-  constructor(private projectService: ProjectService) { }
+  constructor(private projectService: ProjectService, private modalService: NgbModal) { }
 
   ngOnInit() {
     this.getProjectsByPage();
@@ -31,7 +32,6 @@ export class ProjectsComponent implements OnInit {
           this.numbers.push(n);
         }
       }
-      console.log(this.numbers);
     })
   }
 
@@ -55,5 +55,12 @@ export class ProjectsComponent implements OnInit {
   toPage(pageNo: number): void{
     this.page = pageNo;
     this.getProjectsByPage();
+  }
+
+  openModal(id: number): void{
+
+    const modal: NgbModalRef = this.modalService.open(ProjectDetailComponent, {size : 'lg'});
+
+    (<ProjectDetailComponent>modal.componentInstance).status = id;
   }
 }

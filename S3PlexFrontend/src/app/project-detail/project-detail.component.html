@@ -1,4 +1,4 @@
-<ng-template #content let-modal>
+<!-- <ng-template #content let-modal></ng-template>
     <div class="modal-header">
       <h4 class="modal-title">{{project.name}}</h4>
       <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
@@ -18,6 +18,55 @@
     <div class="modal-footer">
       <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
     </div>
-  </ng-template>
+  </ng-template> -->
 
-  <button (click)="openXL(content)">Open Modal</button>
+  <div class="modal-header">
+      <h4 class="modal-title">{{project.name}}</h4>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-3">
+        <p class="title">Uploader <em class="fas fa-user"></em></p>
+        <p>
+          {{ project.user.name }}
+        </p>
+        </div>
+        <div class="col-3">
+          <div *ngIf="project.uri">
+            <p>External Link <em class="fas fa-external-link-alt"></em></p>
+            <a class="hover" href="{{ project.uri }}" rel="noreferrer noopener" target="_blank">{{ project.uri }}</a>
+          </div>
+        </div>
+        <div class="col-3">
+          <p class="title">Likes <em class="fas fa-heart"></em></p>
+          <p>{{project.likes.length}}</p>
+        </div>
+        <div class="col-3">
+          <p class="title cursor-pointer">Upload Date <em class="fas fa-calendar"></em></p>
+          <p>{{ project.created | date: "mediumDate" }}</p>
+        </div>
+      </div>
+      </div>
+
+      <div class="row">
+        <div *ngIf='project.categories.length > 0'>
+          <p class="title">Categories</p>
+          <div class="project-categories">
+            <p *ngFor="let category of project.categories">
+              {{category.name}}
+          </p>
+          </div>
+        </div>
+      </div>
+
+    <br/>
+
+    <div>
+      <p>{{project.description}}&hellip;</p>
+    </div>
+    <div class="text-attributes" *ngFor="let collaborator of project.collaborators">
+        <i class="fas fa-users"></i> {{collaborator.fullName}}
+    </div>
+  <div class="modal-footer">
+
+  </div>

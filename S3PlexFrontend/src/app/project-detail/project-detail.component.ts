@@ -17,13 +17,13 @@ export class ProjectDetailComponent implements OnInit {
   status: number = 0;
 
   constructor(private projectService: ProjectService,   private route: ActivatedRoute, private location: Location,
-    private router: Router, private modelService: NgbModal) { }
+    private router: Router, private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.getProjectById();
   }
 
-  getProjectById(): void {
+  getProjectByIdFromUrl(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.projectService.getProjectById(id)
     .subscribe((data) => {
@@ -32,7 +32,15 @@ export class ProjectDetailComponent implements OnInit {
     })
   }
 
-  openXL(content: any){
-    this.modelService.open(content, {size: 'xl'});
+  getProjectById(): void {
+    this.projectService.getProjectById(this.status)
+    .subscribe((data) => {
+      this.project = data;
+      console.log(this.project);
+    })
+  }
+
+  modalClose(){
+    this.modalService.dismissAll();
   }
 }
