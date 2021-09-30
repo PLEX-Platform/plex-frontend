@@ -9,10 +9,17 @@
   flex-wrap: wrap;
 }
 .card{
-  margin-top:10px;
-  margin-left:10px;
+  margin-top:15px;
+  margin-left:15px;
+  height: 220px;
+  width: 400px;
 }
-
+.card-header{
+ padding-top: 0.5rem;
+ padding-bottom: 0.5rem;
+ padding-right: 1.0rem;
+ padding-left: 1.0rem;
+}
 .bottom-wrapper {
   display: grid;
   grid-template-columns: 4fr 5fr;
@@ -25,14 +32,21 @@
 } 
 .line-clamp { 
   display: -webkit-box; 
-  -webkit-line-clamp: 3; 
+  -webkit-line-clamp: 4; 
   -webkit-box-orient: vertical;   
 }
 .text-description{
     font-size: 13px;
     color: rgb(100, 100, 100);
+    overflow-wrap: anywhere;
 }
 .text-title{
   font-size: 18px;
   font-weight: 700
+}
+.text-attributes{
+  font-size: 12px;
+}
+.card-body{
+  padding: 0.75em;
 }
