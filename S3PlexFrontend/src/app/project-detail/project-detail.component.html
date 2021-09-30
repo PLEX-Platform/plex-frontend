@@ -46,26 +46,25 @@
           <p>{{ project.created | date: "mediumDate" }}</p>
         </div>
       </div>
-      </div>
 
-      <div class="row">
-        <div *ngIf='project.categories.length > 0'>
-          <p class="title">Categories</p>
+      <div class="row" *ngIf='project.categories.length > 0'>
+          <h4>Categories</h4>
           <div class="project-categories">
-            <p *ngFor="let category of project.categories">
+            <p class="category" *ngFor="let category of project.categories">
               {{category.name}}
           </p>
           </div>
-        </div>
       </div>
 
-    <br/>
-
     <div>
+      <h4>Description</h4>
       <p>{{project.description}}&hellip;</p>
     </div>
+
+    <h4>Collaborators</h4>
     <div class="text-attributes" *ngFor="let collaborator of project.collaborators">
         <i class="fas fa-users"></i> {{collaborator.fullName}}
+    </div>
     </div>
   <div class="modal-footer">
 

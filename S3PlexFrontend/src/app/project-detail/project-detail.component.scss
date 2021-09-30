@@ -1,0 +1,16 @@
+.category {
+    text-decoration: none;
+    border-radius: 999px;
+    background-color: orange;
+    color: white;
+    padding: 3px 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 3px 5px;
+    margin: 5px 5px 5px 0;
+    font-size: 12px;
+  }
+
+  .project-categories {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
