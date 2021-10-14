@@ -19,8 +19,8 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgbModule,
-    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
