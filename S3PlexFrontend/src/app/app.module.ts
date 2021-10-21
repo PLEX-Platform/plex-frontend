@@ -10,7 +10,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PreferenceComponent } from './preference/preference.component';
-import {DragDropModule} from '@angular/cdk/drag-drop';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatchmakingGroupComponent } from './matchmaking/matchmaking-group/matchmaking-group.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     NavbarComponent,
     ProjectDetailComponent,
     PreferenceComponent,
+    MatchmakingGroupComponent,
   ],
   imports: [
     BrowserModule,
