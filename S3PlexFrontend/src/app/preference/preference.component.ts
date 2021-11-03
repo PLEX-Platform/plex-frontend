@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-preference',
@@ -7,30 +8,32 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
   styleUrls: ['./preference.component.scss']
 })
 export class PreferenceComponent implements OnInit {
-  movies = [
-    'PLEX',
-    'EasyFlex',
-    'NxtApps',
-    'CM',
-    'Episode V - The Empire Strikes Back',
-    'Episode VI - Return of the Jedi',
-    'Episode VII - The Force Awakens',
-    'Episode VIII - The Last Jedi',
-    'Episode IX – The Rise of Skywalker'
+url = `http://httpbin.org/post`;
+
+constructor(private http: HttpClient) {
+  this.http.post(this.url, this.projects).toPromise().then((data:any) => {
+    console.log(data);
+  });
+}
+  projects = [
+    'Extending the ACI Rental System',
+    'Extending the Fontys iPost System',
+    'PLEX (Project Leader eXcellence platform)',
+    'Mobiele Toegang voor Huisartsen',
+    'Medicatiebewaking door Patient',
+    'Digitaal Uitzendbureau',
+    'Validation of MO Messages Workflow',
+    'Security Awareness Trainer',
+    'Onboarding Gamification'
   ];
 
 
-  constructor() { }
 
   ngOnInit(): void {
   }
   drop(event: CdkDragDrop<string[]>) {
-    moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
-    console.log(this.movies)
-  }
-
-  onSubmit(data: CdkDragDrop<any>) {
-    console.warn(data);
+    moveItemInArray(this.projects, event.previousIndex, event.currentIndex);
+    console.log(this.projects)
   }
 }
 
