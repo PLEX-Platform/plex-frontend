@@ -8,10 +8,13 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./preference.component.scss']
 })
 export class PreferenceComponent implements OnInit {
-  url = `http://httpbin.org/post`;
+url = `http://httpbin.org/post`;
 
-  constructor(private http: HttpClient) { };
-
+constructor(private http: HttpClient) {
+  this.http.post(this.url, this.projects).toPromise().then((data:any) => {
+    console.log(data);
+  });
+}
   projects = [
     'Extending the ACI Rental System',
     'Extending the Fontys iPost System',
@@ -23,12 +26,6 @@ export class PreferenceComponent implements OnInit {
     'Security Awareness Trainer',
     'Onboarding Gamification'
   ];
-
-  onSubmit() {
-    this.http.post(this.url, this.projects).toPromise().then((data: any) => {
-      console.log(data);
-    });
-  }
 
 
 
