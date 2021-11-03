@@ -35,14 +35,35 @@ done, click "Finish" to close the installation wizard.a
 
 <details>
 <summary> 
-MacOs
+macOS
 </summary>
 <p>
-1)
-Open the terminal by pressing: <kbd> ⌘ + Space</kbd> and enter: _"Terminal"_ in the "Spotlight Search"
+1.Open the terminal by pressing: <kbd> ⌘ + Space</kbd> and enter: <i>"Terminal"</i> in the "Spotlight Search"
+
+2.Enter `node -v` and press <kbd> Enter </kbd> if you have already installed node, it will output the version. If you haven't the terminal will output something like: `-bash: node: command not found`
+* In case it is already installed, update the NPM to the latest version by typing in: `sudo npm i -g npm`. This way you'll have installed the latest node version and you can proceed to the [__Angular installation__](#Angular)
+
+3.Go to https://nodejs.org/en/download/ and choose the <i> "macOS Installer" </i>. A download will be prompted. Just like the Windows version, the NPM Package manager will be included.
+
+4.Locate the file in Finder and double click on it.
   
-2)
-Enter `node -v` and press <kbd> Enter </kbd>
-</p>
- w 
+5.Go through the entire installation process.
+  
+6.Open the terminal by pressing: <kbd> ⌘ + Space</kbd> and enter: <i>"Terminal"</i> in the "Spotlight Search"
+  
+7.Enter `node -v` and press <kbd> Enter </kbd> If everything went the way it is supposed to, your terminal should now output the version of NodeJS you have installed
+</p> 
 </details>  
+
+<details>
+<summary>
+Linux (Ubuntu)
+</summary>
+<p>
+  
+</p>
+</details>
+
+## Angular  <a name="Angular"></a> ##
+ 
+
