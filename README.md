@@ -5,7 +5,6 @@ This is the frontend repository for the PLEX project. A tool for teachers to app
 - Installation
   - Node.JS / NPM
   - Angular
-  - IDE 
 - Usage
   - Teacher perspective
   - Student perspective
@@ -60,10 +59,27 @@ macOS
 Linux (Ubuntu)
 </summary>
 <p>
+1.Open the terminal by pressing: <kbd> CTRL + ALT + T </kbd>
   
+2.Type this into the <i>"Terminal"</i>: `sudo apt install nodejs`. Enter your password when being prompted to do so.
+
+3.After the installation is finished, enter this into the <i>"Terminal"</i>: `node -v`. If everything went well, the <i>"Terminal"</i> will output the version of NodeJS
+  
+4.Type this into the <i>"Terminal"</i>: `sudo apt install npm`. Enter your password when being prompted to do so. 
+  
+5.After the installation is finished, enter this into the <i>"Terminal"</i>: `npm -v`. If everything went well, the <i>"Terminal"</i> will output the version of NPM.
 </p>
 </details>
 
 ## Angular  <a name="Angular"></a> ##
  
+We're making use of the Angular Framework so we need to install it by using NPM, which we just installed. 
+
+1.Open the <i>"Terminal"</i>/Command Prompt/PowerShell on your system (as an administrator)
+
+2.Run this <i>command</i>:`sudo npm install -g @angular/cli` for Linux/macOS and `npm install -g @angular/cli`
+
+3.To check if your installation finished properly, enter this <i>command</i>: `ng --version`. This way your <i>"Terminal"</i> will give you information about the installed Angular version. 
+
+
 
