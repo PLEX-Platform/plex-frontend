@@ -75,7 +75,7 @@ Linux (Ubuntu)
  
 We're making use of the Angular Framework so we need to install it by using NPM, which we just installed. 
 
-1.Open the <i>"Terminal"</i>/Command Prompt/PowerShell on your system (as an administrator)
+1.Open the <i>"Terminal"/Command Prompt/PowerShell</i> on your system (as an administrator)
 
 2.Run this <i>command</i>:`sudo npm install -g @angular/cli` for Linux/macOS and `npm install -g @angular/cli`
 
