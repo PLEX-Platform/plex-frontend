@@ -81,5 +81,24 @@ We're making use of the Angular Framework so we need to install it by using NPM,
 
 3.To check if your installation finished properly, enter this <i>command</i>: `ng --version`. This way your <i>"Terminal"</i> will give you information about the installed Angular version. 
 
+# Usage #
 
+## Teacher Perspective ##
+
+## Student Perspective ##
+
+# Contributing #
+
+# Credits #
+
+Fontys Tilburg
+Dex - Platform for excellence
+Wensley Podrono
+Sam Boers
+Steijn Sweere
+Nick Kruize
+Michael Vroegop
+Donovan Khoun
+
+# License #
 
