@@ -1,5 +1,11 @@
 /* Importing Bootstrap SCSS file. */
-
+.project-list-header{ 
+  margin-left: 45px;
+  margin-top: 10px;
+}
+h1{
+  font-size: 32px;
+}
 .projects{
   list-style-type: none;
   display: flex;

@@ -1,3 +1,7 @@
+<ng-container>
+  <div class="project-list-header">
+    <h1 class="">Project overview</h1>
+  </div>
 <ul class="projects">
   <li *ngFor="let project of projectslist.results">
     <div class="card border border-primary shadow-0 " (click)="openModal(project.id)" style="background-color:#ffffff;">
@@ -46,4 +50,5 @@
       <button *ngIf = "(projectslist.page < projectslist.totalPages)" [disabled] = "false" (click)="toPage(projectslist.totalPages)">>></button>
     </div>
   </div>
+  </ng-container>
 
