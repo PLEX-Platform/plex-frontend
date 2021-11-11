@@ -1,4 +1,4 @@
 <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
-  <div class="example-box" *ngFor="let project of projects" cdkDrag>{{project}}</div>
+  <div class="example-box" *ngFor="let project of projects" cdkDrag>{{project.name}}</div>
 </div>
-<button type="submit" class="btn btn-primary">Submit preference</button>
+<button on-click="onSubmit()" type="submit" class="btn btn-primary">Submit preference</button>
