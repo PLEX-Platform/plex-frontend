@@ -9,22 +9,6 @@ import { KeyValue } from '@angular/common';
   styleUrls: ['./matchmaking-group.component.scss']
 })
 export class MatchmakingGroupComponent implements OnInit {
-
-  // todo = [
-  //   'Alex',
-  //   'Lexa',
-  //   'Axel',
-  //   'Elax',
-
-  // ];
-
-  // done = [
-  //   'Xael',
-  //   'Xeal',
-  //   'Exla',
-  //   'Leax',
-  //   'Xale',
-  // ];
   matchmakingResult: Record<string, string[]> = {
     "ACI Rental System": [
       "Bednarek, Michael M.D.",
