@@ -104,9 +104,6 @@ export class PreferenceComponent implements OnInit {
     return projectsToPost
   }
 
-
-
-
   onSubmit() {
     let x = this.filterProjects()
     let postObj = {
@@ -133,16 +130,5 @@ export class PreferenceComponent implements OnInit {
     this.preferenceArray = this.projectslist.results;
     console.log(this.preferenceArray)
   }
-  // filterProjects() {
-  //   let projectsToPost: ProjectToPost[] = []
-  //   for (const index of this.projectslist.results) {
-  //     let testObject = {
-  //       ProjectId: index.id,
-  //       PriorityRank: 7 // needs to be changed to index of project in drag and drop list
-  //     }
-  //     projectsToPost.push(testObject);
-  //   }
-  //   return projectsToPost
-  // }
 }
 
