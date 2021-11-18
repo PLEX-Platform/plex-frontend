@@ -6,6 +6,7 @@ import { ProjectToPost } from '../ProjectToPost';
 import { ProjectService } from '../project.service';
 import { ProjectList } from '../ProjectList';
 import { Project } from '../Project';
+import { filter } from 'rxjs/operators';
 
 
 @Component({
@@ -90,7 +91,7 @@ export class PreferenceComponent implements OnInit {
     })
   }
 
-  filterProjects() {
+  filterProjects(): ProjectToPost[] {
     let projectsToPost: ProjectToPost[] = []
     for (let index = 0; index < this.preferenceArray.length; index++) {
       let testObject = {
@@ -98,21 +99,28 @@ export class PreferenceComponent implements OnInit {
         PriorityRank: index + 1
       }
       projectsToPost.push(testObject)
+      console.log(JSON.stringify(projectsToPost))
     }
     return projectsToPost
   }
 
 
 
-  postObj = {
-    ProjectPriorities: this.filterProjects(),
-    StudentPCN: 411520
-  }
 
   onSubmit() {
-    this.http.post(this.url, this.postObj).toPromise().then((data: any) => {
+    let x = this.filterProjects()
+    let postObj = {
+      ProjectPriorities: x,
+      StudentPCN: 411520
+    }
+    console.log(x)
+    this.http.post(this.url, postObj).toPromise().then((data: any) => {
       console.log(data);
     });
+  }
+
+  onClick() {
+    console.log(this.filterProjects())
   }
 
 
