@@ -3,6 +3,10 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { HttpClient } from '@angular/common/http';
 import { ProjectPriority } from '../ProjectPriority';
 import { ProjectToPost } from '../ProjectToPost';
+import { ProjectService } from '../project.service';
+import { ProjectList } from '../ProjectList';
+import { Project } from '../Project';
+
 
 @Component({
   selector: 'app-preference',
@@ -10,9 +14,11 @@ import { ProjectToPost } from '../ProjectToPost';
   styleUrls: ['./preference.component.scss']
 })
 export class PreferenceComponent implements OnInit {
-  url = `https://localhost:5001/api/studentchoices`;
+  url = `https://localhost:3001/api/studentchoices`;
+  projectslist = {} as ProjectList
+  preferenceArray: Project[] = []
 
-  constructor(private http: HttpClient) { };
+  constructor(private http: HttpClient, private projectService: ProjectService) { };
 
 
 
@@ -77,23 +83,30 @@ export class PreferenceComponent implements OnInit {
   ]
 
 
-
+  getAllProjects(): void {
+    this.projectService.getAllProjects().subscribe((data) => {
+      this.projectslist = data;
+      console.log(this.projectslist)
+    })
+  }
 
   filterProjects() {
     let projectsToPost: ProjectToPost[] = []
-    for (const index of this.projects) {
+    for (let index = 0; index < this.preferenceArray.length; index++) {
       let testObject = {
-        ProjectId: index.id,
-        PriorityRank: index.priorityrank
+        ProjectId: this.preferenceArray[index].id,
+        PriorityRank: index + 1
       }
-      projectsToPost.push(testObject);
+      projectsToPost.push(testObject)
     }
     return projectsToPost
   }
 
+
+
   postObj = {
     ProjectPriorities: this.filterProjects(),
-    StudentPCN: 511420
+    StudentPCN: 411520
   }
 
   onSubmit() {
@@ -104,10 +117,24 @@ export class PreferenceComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.getAllProjects();
   }
+
   drop(event: CdkDragDrop<string[]>) {
-    moveItemInArray(this.projects, event.previousIndex, event.currentIndex);
-    console.log(this.projects)
+    moveItemInArray(this.projectslist.results, event.previousIndex, event.currentIndex);
+    this.preferenceArray = this.projectslist.results;
+    console.log(this.preferenceArray)
   }
+  // filterProjects() {
+  //   let projectsToPost: ProjectToPost[] = []
+  //   for (const index of this.projectslist.results) {
+  //     let testObject = {
+  //       ProjectId: index.id,
+  //       PriorityRank: 7 // needs to be changed to index of project in drag and drop list
+  //     }
+  //     projectsToPost.push(testObject);
+  //   }
+  //   return projectsToPost
+  // }
 }
 

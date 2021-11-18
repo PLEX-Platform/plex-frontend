@@ -12,6 +12,7 @@ import { Project } from './Project';
 export class ProjectService {
 
   private DEXUrl = 'https://localhost:5001/api/';  // URL to DEX web api
+  private DEXURL = 'https://api.dex.software/api/project'
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -37,5 +38,8 @@ export class ProjectService {
 
   getProjectsBySearchQuery(query: string): Observable<ProjectList>{
     return this.http.get<ProjectList>(this.DEXUrl + 'Search/internal/' + query);
+  }
+  getAllProjects():Observable<ProjectList> {
+    return this.http.get<ProjectList>(this.DEXUrl + 'project');
   }
 }
