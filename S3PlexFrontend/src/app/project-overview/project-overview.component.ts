@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProjectsComponent } from './projects/projects.component';
 import { FilterMenuComponent } from './filter-menu/filter-menu.component';
-import { ProjectList } from '../ProjectList';
-import { Project } from '../Project';
+import { ProjectList } from '../../models/ProjectList';
+import { Project } from '../../models/Project';
 
 @Component({
   selector: 'app-project-overview',

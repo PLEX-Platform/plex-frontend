@@ -3,8 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import {Router} from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { ProjectService } from '../project.service';
-import { Project } from '../Project';
+import { ProjectService } from '../../services/project.service';
+import { Project } from '../../models/Project';
 
 @Component({
   selector: 'app-project-detail',
