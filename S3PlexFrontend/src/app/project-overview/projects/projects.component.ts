@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectDetailComponent } from '../../project-detail/project-detail.component';
 import { NgbModal, NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
-import { ProjectService } from '../../project.service';
-import { ProjectList } from '../../ProjectList';
+import { ProjectService } from '../../../services/project.service';
+import { ProjectList } from '../../../models/ProjectList';
 
 @Component({
   selector: 'app-projects',
