@@ -1,5 +1,5 @@
 /* Importing Bootstrap SCSS file. */
-.project-list-header{ 
+.project-list-header{
   margin-left: 45px;
   margin-top: 10px;
 }
@@ -31,15 +31,15 @@ h1{
   grid-template-columns: 4fr 5fr;
   gap: 10px;
 }
-.module { 
-  width: 400px; 
-  margin: 0 0 2em 0; 
-  overflow: hidden; 
-} 
-.line-clamp { 
-  display: -webkit-box; 
-  -webkit-line-clamp: 4; 
-  -webkit-box-orient: vertical;   
+.module {
+  width: 400px;
+  margin: 0 0 2em 0;
+  overflow: hidden;
+}
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 .text-description{
     font-size: 13px;
@@ -55,4 +55,9 @@ h1{
 }
 .card-body{
   padding: 0.75em;
+}
+
+.date
+{
+  color: 2;
 }

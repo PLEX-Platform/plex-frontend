@@ -12,7 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PreferenceComponent } from './preference/preference.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatchmakingGroupComponent } from './matchmaking/matchmaking-group/matchmaking-group.component';
-import { FilterMenuComponent } from './project-overview/filter-menu/filter-menu/filter-menu.component';
+import { FilterMenuComponent } from './project-overview/filter-menu/filter-menu.component';
 import { ProjectOverviewComponent } from './project-overview/project-overview.component';
 
 

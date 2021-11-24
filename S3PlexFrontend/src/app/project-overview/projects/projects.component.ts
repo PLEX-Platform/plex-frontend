@@ -10,11 +10,11 @@ import { ProjectList } from '../../../models/ProjectList';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  
+
   projectslist = {} as ProjectList;
   page: number = 1;
   numbers: number[] = [];
-  
+
   constructor(private projectService: ProjectService, private modalService: NgbModal) { }
 
   ngOnInit() {
