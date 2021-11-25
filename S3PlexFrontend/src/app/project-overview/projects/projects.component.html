@@ -1,11 +1,10 @@
 <div class="col-md-10">
 <ng-container>
-  <div class="project-list-header">
-    <h1 class="">Project overview</h1>
+  <div class="project-list-header">Project overview
   </div>
 <ul class="projects">
   <li *ngFor="let project of projectslist.results">
-    <div class="card border border-primary shadow-0 " (click)="openModal(project.id)" style="background-color:#ffffff;">
+    <div class="card border-primary shadow-0 " (click)="openModal(project.id)" style="background-color:#ffffff;">
       <div class="card-header text-title">{{project.name}}</div>
       <div class="card-body">
         <p class="card-text module line-clamp text-description">
