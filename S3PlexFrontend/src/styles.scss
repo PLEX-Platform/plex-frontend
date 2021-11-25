@@ -45,8 +45,8 @@ $S3PlexFrontend-theme: mat.define-light-theme((
 /*importing font*/
 @import "https://fonts.googleapis.com/css?family=Montserrat:500,700";
 
-.html {
-  font-family: 'Montserrat';
-}
+// .html {
+// //  font-family: 'Montserrat';
+// }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
