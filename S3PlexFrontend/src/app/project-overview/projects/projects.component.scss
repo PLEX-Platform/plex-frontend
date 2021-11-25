@@ -1,5 +1,9 @@
 /* Importing Bootstrap SCSS file. */
-.project-list-header{
+:host {
+  background: blue;
+  border: black;
+}
+.project-list-header{ 
   margin-left: 45px;
   margin-top: 10px;
 }
