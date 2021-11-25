@@ -11,7 +11,6 @@ export class MatchmakingService {
 
   constructor() { }
 
-  sendRequestForMatchmaking: Observable<MatchMakingResult>(private http: HttpClient){
-    
+  // sendRequestForMatchmaking: Observable<MatchMakingResult>(private http: HttpClient){
   }
-}
+
