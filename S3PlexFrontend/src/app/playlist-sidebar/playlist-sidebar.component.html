@@ -1,6 +1,19 @@
-<div *ngIf="playlistProjects != null">
+<div *ngIf= "playlistProjects != null; else emptyblock">
   <div *ngFor="let project of playlistProjects.Projects">
-    {{project.name}}
+    <div class="col-lg-8">
+      {{project.name}}
+    </div>
+    <div class="col-lg-4">
+      <button></button>
+    </div>
   </div>
 </div>
+<ng-template #emptyblock>
+  <div class="col-lg-8">
+    Add projects to the playlist!
+  </div>
+  <div class="col-lg-4">
+    <button> Remove from playlist -</button>
+  </div>
+</ng-template>
 
