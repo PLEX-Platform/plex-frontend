@@ -1,10 +1,6 @@
-.component{
-    
-}
-
 .component1 {
-    background-color: red;
+    background-color: var(--background-secondaryComponent-color);
 }
 .component2{
-    background-color: blueviolet;
+    background-color: var(--background-primary-color);
 }

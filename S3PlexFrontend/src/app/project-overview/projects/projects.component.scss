@@ -1,5 +1,7 @@
 /* Importing Bootstrap SCSS file. */
-
+div{
+  color: var(--text-color)
+}
  .project-list-header{ 
    width: 100%;
    margin: 1em 0;
@@ -7,7 +9,6 @@
    justify-content: space-between;
    align-content: center;
    font-size: 350%;
-   line-height: 1;
    margin-left: 15px;
  }
 .projects{
@@ -25,6 +26,7 @@
   width: 400px;
   cursor: pointer;
   transition: .2s;
+  background-color: var(--background-secondary-color)!important;
 }
 .card:hover{
   box-shadow: 3px 3px 3px rgb(1, 1, 56);
@@ -70,4 +72,21 @@
 .date
 {
   color: 2;
+}
+.btn-group {
+  position: relative;
+  left:30%;
+}
+.btn-group .button{
+  background-color: var(--interactable-secondary-color);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32px;
+  cursor: pointer;
+  float: left;
+  margin-left: 10px;
 }
