@@ -4,6 +4,7 @@
   <li *ngFor="let project of projectslist.results">
     <div class="card border-primary shadow-0 " (click)="openModal(project.id)" style="background-color:#ffffff;">
       <div class="card-header text-title">{{project.name}}</div>
+      <button (click)="openModal(project.id)" >See more</button>
       <div class="card-body">
         <p class="card-text module line-clamp text-description">
           {{project.shortDescription}}
@@ -26,6 +27,7 @@
           <i class="fas fa-user"></i> {{project.user.name}}
         </div>
       </div>
+      <button on-click="addToPlaylist(project.id)" class="btn btn-primary">Add to playlist</button>
     </div>
   </li>
 </ul>
