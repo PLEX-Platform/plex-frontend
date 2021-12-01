@@ -3,9 +3,9 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { HttpClient } from '@angular/common/http';
 import { ProjectPriority } from '../ProjectPriority';
 import { ProjectToPost } from '../ProjectToPost';
-import { ProjectService } from '../project.service';
-import { ProjectList } from '../ProjectList';
-import { Project } from '../Project';
+import { ProjectService } from 'src/services/project.service';
+import { ProjectList } from 'src/models/ProjectList';
+import { Project } from 'src/models/Project';
 import { filter } from 'rxjs/operators';
 
 

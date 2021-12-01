@@ -14,6 +14,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatchmakingGroupComponent } from './matchmaking/matchmaking-group/matchmaking-group.component';
 import { FilterMenuComponent } from './project-overview/filter-menu/filter-menu.component';
 import { ProjectOverviewComponent } from './project-overview/project-overview.component';
+import { PlaylistSidebarComponent } from './playlist-sidebar/playlist-sidebar.component';
 
 
 
@@ -27,6 +28,7 @@ import { ProjectOverviewComponent } from './project-overview/project-overview.co
     MatchmakingGroupComponent,
     FilterMenuComponent,
     ProjectOverviewComponent,
+    PlaylistSidebarComponent,
   ],
   imports: [
     BrowserModule,
