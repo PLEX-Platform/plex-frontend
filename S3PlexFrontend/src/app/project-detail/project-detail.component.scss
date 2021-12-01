@@ -1,3 +1,30 @@
+p {
+  font-size: 16px;
+}
+.modal-header{
+  padding: 30px 15px;
+  background: var(--background-secondary-color);
+}
+.modal-body{
+  background: var(--background-secondary-color);
+  filter: brightness(1.3);
+}
+.modal-footer{
+  background: var(--background-secondary-color);
+}
+.styling{
+  color: var(--text-color);
+}
+.modal-title{
+  font-size: 32px;
+  font-weight: bold;
+  padding-top: 10px;
+  
+}
+
+.title{
+  font-size: 24px;
+}
 .category {
     text-decoration: none;
     border-radius: 999px;
@@ -13,4 +40,15 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
+  }
+.button{
+    background-color: var(--interactable-secondary-color);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 32px;
+    cursor: pointer;
+    margin-right: 20px;
+    border: 5px solid;
+    border-color: #ecb32e;
   }

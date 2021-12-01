@@ -55,8 +55,9 @@ div{
 }
 .text-description{
     font-size: 13px;
-    color: rgb(100, 100, 100);
+    color: var(--text-color);
     overflow-wrap: anywhere;
+    filter: brightness(0.7);
 }
 .text-title{
   font-size: 18px;
@@ -79,14 +80,14 @@ div{
 }
 .btn-group .button{
   background-color: var(--interactable-secondary-color);
-  border: none;
+  border: darkorange;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 32px;
   cursor: pointer;
-  float: left;
   margin-left: 10px;
+  margin-bottom: 15px;
 }
