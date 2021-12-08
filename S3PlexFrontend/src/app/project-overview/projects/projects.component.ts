@@ -54,7 +54,6 @@ export class ProjectsComponent implements OnInit {
       console.log(`Project ${playlistItem.name} already is in the playlist`)
     }
 
-    // check if project already exists in playlist, if so. give error("Project already exists in playlist")
   }
 
   postPlaylist() {
