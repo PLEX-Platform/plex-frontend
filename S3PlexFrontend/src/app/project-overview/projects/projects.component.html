@@ -2,10 +2,10 @@
   </div>
 <ul class="projects">
   <li *ngFor="let project of projectslist.results">
-    <div class="card border-primary shadow-0 " style="background-color:#ffffff;">
+    <div class="card shadow-0 "  style="background-color:#ffffff;">
       <div class="card-header text-title">{{project.name}}</div>
       <button (click)="openModal(project.id)" >See more</button>
-      <div class="card-body">
+      <div class="card-body" (click)="openModal(project.id)">
         <p class="card-text module line-clamp text-description">
           {{project.shortDescription}}
         </p>
@@ -32,22 +32,10 @@
   </li>
 </ul>
 <br/>
-<button on-click="postPlaylist()">Submit playlist</button>
-  <div class=row>
-    <div class=col-4></div>
-    <div class=col-1>
-      <button *ngIf = "(projectslist.page > 2)" [disabled] = "false" (click)="toPage(1)"><<</button>
-    </div>
-    <div class=col-1>
-      <button *ngIf = "(projectslist.page > 1)" [disabled] = "false" (click)="toPage(projectslist.page-1)">{{projectslist.page-1}}</button>
-    </div>
-    <div class=col-1>
-      <button (click)="toPage(projectslist.page)">{{projectslist.page}}</button>
-    </div>
-    <div class=col-1>
-      <button *ngIf = "(projectslist.page < projectslist.totalPages)" [disabled] = "false" (click)="toPage(projectslist.page+1)">{{projectslist.page+1}}</button>
-    </div>
-    <div class=col-1>
-      <button *ngIf = "(projectslist.page < projectslist.totalPages)" [disabled] = "false" (click)="toPage(projectslist.totalPages)">>></button>
-    </div>
-  </div>
+<div class="btn-group">
+  <button  class="button" *ngIf = "(projectslist.page > 2)" [disabled] = "false" (click)="toPage(1)"><<</button>
+  <button  class="button" *ngIf = "(projectslist.page > 1)" [disabled] = "false" (click)="toPage(projectslist.page-1)">{{projectslist.page-1}}</button>
+  <button  class="button" (click)="toPage(projectslist.page)">{{projectslist.page}}</button>
+  <button  class="button" *ngIf = "(projectslist.page < projectslist.totalPages)" [disabled] = "false" (click)="toPage(projectslist.page+1)">{{projectslist.page+1}}</button>
+  <button  class="button" *ngIf = "(projectslist.page < projectslist.totalPages)" [disabled] = "false" (click)="toPage(projectslist.totalPages)">>></button>
+</div>
