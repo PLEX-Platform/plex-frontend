@@ -22,7 +22,8 @@ export class ProjectsComponent implements OnInit {
   playlist: Project[] = [];
 
 
-  constructor(private projectService: ProjectService, private modalService: NgbModal) {
+  constructor(private projectService: ProjectService, private modalService: NgbModal ) {
+
   }
 
   ngOnInit() {
