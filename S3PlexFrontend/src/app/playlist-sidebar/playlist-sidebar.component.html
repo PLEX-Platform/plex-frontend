@@ -1,9 +1,10 @@
 <div class="row sideBar">
-  <div *ngIf= "playlistProjects != null; else emptyblock">
-    <div *ngFor="let project of playlistProjects.Projects">
+  <div *ngIf= "playlist.length != 0; else emptyblock">
+    <div *ngFor="let project of playlist">
       <div class="col-lg-8">
         {{project.name}}
       </div>
+   
       <div class="col-lg-4">
         <button type="button" class="btn removeFromPlaylistBtn"><i class="bi bi-file-excel"></i></button>
       </div>
@@ -27,5 +28,4 @@
       <span class="placeholder col-12"></span>
     </p>
   </ng-template>
-
 </div>

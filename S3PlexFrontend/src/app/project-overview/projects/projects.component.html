@@ -3,9 +3,7 @@
 <ul class="projects">
   <li *ngFor="let project of projectslist.results">
     <div class="card shadow-0 "  style="background-color:#ffffff;">
-      <div class="card-header text-title">{{project.name}}
-        <button id="hat" on-click="addToPlaylist(project.id)" class="btn btn-primary">+</button>
-      </div>
+      <div class="card-header text-title">{{project.name}}</div>
       <div class="card-body" (click)="openModal(project.id)">
         <p class="card-text module line-clamp text-description">
           {{project.shortDescription}}
@@ -30,6 +28,7 @@
         <button class ="btn-secondary bi bi-three-dots" (click)="openModal(project.id)" >
         </button>
       </div>
+      <button id="btn" on-click="addToPlaylist(project.id)" class="btn btn-primary">Add to playlist</button>
     </div>
   </li>
 </ul>

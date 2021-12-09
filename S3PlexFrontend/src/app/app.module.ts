@@ -15,6 +15,7 @@ import { MatchmakingGroupComponent } from './matchmaking/matchmaking-group/match
 import { FilterMenuComponent } from './project-overview/filter-menu/filter-menu.component';
 import { ProjectOverviewComponent } from './project-overview/project-overview.component';
 import { PlaylistSidebarComponent } from './playlist-sidebar/playlist-sidebar.component';
+import { PlaylistSharedService } from 'playlistSharedService/playlist-shared.service';
 
 
 
@@ -38,7 +39,9 @@ import { PlaylistSidebarComponent } from './playlist-sidebar/playlist-sidebar.co
     BrowserAnimationsModule,
     DragDropModule,
   ],
-  providers: [],
+  providers: [
+    PlaylistSharedService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
