@@ -4,9 +4,8 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { ProjectService } from 'src/services/project.service';
 import { ProjectList } from 'src/models/ProjectList';
 import { Project } from 'src/models/Project';
-import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { play } from 'ngx-bootstrap-icons';
+import { PlaylistSharedService } from 'playlistSharedService/playlist-shared.service';
 
 @Component({
   selector: 'app-projects',
@@ -20,16 +19,16 @@ export class ProjectsComponent implements OnInit {
   projectslist = {} as ProjectList;
   page: number = 1;
   numbers: number[] = [];
-  // playlist: Project[] = [];
   playlist: Project[] = [];
   url = "http://httpbin.org/post";
 
 
-  constructor(private http: HttpClient, private projectService: ProjectService, private modalService: NgbModal) {
+  constructor(private http: HttpClient, private projectService: ProjectService, private modalService: NgbModal, private sharedService: PlaylistSharedService) {
   }
 
   ngOnInit() {
     this.getProjectsByPage();
+    this.sharedService.sharedPlaylist.subscribe(playlist => this.playlist = playlist)
   }
 
   getProjectsByPage(): void {
@@ -47,13 +46,8 @@ export class ProjectsComponent implements OnInit {
 
   async addToPlaylist(id: number) {
     const playlistItem: Project = await this.projectService.getProjectById(id).toPromise().then(data => { return data })
-    if(!this.playlist.includes(playlistItem)) {
       this.playlist.push(playlistItem)
       console.log(this.playlist)
-    } else if(this.playlist.includes(playlistItem)) {
-      console.log(`Project ${playlistItem.name} already is in the playlist`)
-    }
-
   }
 
   postPlaylist() {

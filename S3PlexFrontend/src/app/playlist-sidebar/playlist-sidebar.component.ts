@@ -1,7 +1,8 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Playlist } from 'src/models/Playlist.model';
 import { ProjectDetailComponent } from '../project-detail/project-detail.component';
 import { Project } from 'src/models/Project';
+import { PlaylistSharedService } from 'playlistSharedService/playlist-shared.service';
 
 @Component({
   selector: 'app-playlist-sidebar',
@@ -9,14 +10,18 @@ import { Project } from 'src/models/Project';
   styleUrls: ['./playlist-sidebar.component.scss']
 })
 export class PlaylistSidebarComponent implements OnInit {
-  @Input() playlistProjects!: Playlist;
+  // @Input() playlistProjects!: Playlist;
 
-  constructor()
-  {
+  constructor(private sharedService: PlaylistSharedService) { }
 
-  }
+  playlist: Project[] = [];
 
   ngOnInit(): void {
+    this.sharedService.sharedPlaylist.subscribe(playlist => this.playlist = playlist)
+  }
+
+  removeProject() {
+    
   }
 
 }
