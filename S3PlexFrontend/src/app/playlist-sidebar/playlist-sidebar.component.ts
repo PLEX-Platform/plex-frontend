@@ -20,8 +20,7 @@ export class PlaylistSidebarComponent implements OnInit {
     this.sharedService.sharedPlaylist.subscribe(playlist => this.playlist = playlist)
   }
 
-  removeProject() {
-    
+  deleteProject(i: number) {
+    this.playlist.splice(i,1)
   }
-
 }
