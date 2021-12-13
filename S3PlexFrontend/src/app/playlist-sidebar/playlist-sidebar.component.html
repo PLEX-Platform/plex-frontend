@@ -9,7 +9,7 @@
         <button type="button" (click)="deleteProject(i)" class="btn removeFromPlaylistBtn"><i class="bi bi-file-excel"></i></button>
       </div>
     </div>
-    <button type="button" class="btn btn-primary">Save playlist</button>
+    <button type="button" class="btn btn-primary" on-click="postPlaylist()">Save playlist</button>
   </div>
   <ng-template #emptyblock>
     <div class="col-md-12">

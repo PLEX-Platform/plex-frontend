@@ -1,6 +1,8 @@
-import { Project } from "./Project";
+import { PlaylistProjectModel } from "./PlaylistProjectModel";
 
 export interface Playlist
 {
-  Projects : Project[]
+  Projects: PlaylistProjectModel[];
+  Name : string;
+  MaximumNumberOfStudentsPerProject : number;
 }
