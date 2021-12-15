@@ -49,6 +49,10 @@ div{
  padding-right: 1.0rem;
  padding-left: 1.0rem;
 }
+.card-header .btn-primary{
+  background-color: var(--interactable-secondary-color)!important;
+  border: none;
+}
 .bottom-wrapper .btn-secondary{
   background: var(--background-secondary-color);
   display:flex;
@@ -114,8 +118,4 @@ div{
   cursor: pointer;
   margin-left: 10px;
   margin-bottom: 15px;
-}
-
-#btn {
-  background-color: darkorange;
 }
