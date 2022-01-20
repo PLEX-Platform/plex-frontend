@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { PlaylistSharedService } from 'playlistSharedService/playlist-shared.service';
 
 import { ProjectOverviewComponent } from './project-overview.component';
 
@@ -8,7 +9,8 @@ describe('ProjectOverviewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProjectOverviewComponent ]
+      declarations: [ ProjectOverviewComponent ],
+      providers: [PlaylistSharedService]
     })
     .compileComponents();
   });

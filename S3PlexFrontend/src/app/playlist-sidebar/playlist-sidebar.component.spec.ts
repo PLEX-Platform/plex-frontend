@@ -1,4 +1,6 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { PlaylistSharedService } from 'playlistSharedService/playlist-shared.service';
 
 import { PlaylistSidebarComponent } from './playlist-sidebar.component';
 
@@ -8,7 +10,11 @@ describe('PlaylistSidebarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PlaylistSidebarComponent ]
+      imports: [
+        HttpClientTestingModule
+      ],
+      declarations: [ PlaylistSidebarComponent ],
+      providers: [PlaylistSharedService]
     })
     .compileComponents();
   });

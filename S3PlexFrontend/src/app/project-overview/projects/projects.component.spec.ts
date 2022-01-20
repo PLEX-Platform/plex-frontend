@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ProjectsComponent } from './projects.component';
+import { PlaylistSharedService } from 'playlistSharedService/playlist-shared.service';
+import { NgModule } from '@angular/core';
 
 describe('ProjectsComponent', () => {
   let component: ProjectsComponent;
@@ -9,9 +11,10 @@ describe('ProjectsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        HttpClientTestingModule 
+        HttpClientTestingModule
       ],
-      declarations: [ ProjectsComponent ]
+      declarations: [ ProjectsComponent ],
+      providers: [PlaylistSharedService]
     })
     .compileComponents();
   });
