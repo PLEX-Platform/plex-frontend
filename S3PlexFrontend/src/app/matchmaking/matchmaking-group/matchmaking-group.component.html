@@ -1,0 +1,25 @@
+<div cdkDropListGroup class="d-block p-4">
+  <div class="matchmaking-container" *ngFor="let item of matchmakingResult | keyvalue:originalOrder">
+    <h2 class="project-title d-flex align-items-end">{{item.key}}</h2>
+  
+    <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="matchmakingResult[item.key]" 
+      class="matchmaking-project-group-list" (cdkDropListDropped)="drop($event)"
+      [attr.id]="item.key + 'list'">
+      <ng-template #tipcontent>
+        Hex: 1
+        <br>
+        Plex: 2
+      </ng-template>
+      <div class="example-box" *ngFor="let student of item.value" cdkDrag placement="right" [ngbTooltip]="tipcontent">{{student}}</div>
+    </div>
+  </div>
+<!--   
+  <div class="matchmaking-container">
+    <h2>Plex</h2>
+  
+    <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="matchmakingResult['Plex']" [cdkDropListConnectedTo]="[todoList]"
+      class="matchmaking-project-group-list" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of matchmakingResult['Plex']" cdkDrag>{{item}}</div>
+    </div>
+  </div> -->
+</div>

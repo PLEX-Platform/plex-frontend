@@ -1,11 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ProjectDetailComponent } from './project-detail.component';
+import { PreferenceComponent } from './preference.component';
 import { RouterTestingModule } from '@angular/router/testing';
 
-describe('ProjectDetailComponent', () => {
-  let component: ProjectDetailComponent;
-  let fixture: ComponentFixture<ProjectDetailComponent>;
+describe('PreferenceComponent', () => {
+  let component: PreferenceComponent;
+  let fixture: ComponentFixture<PreferenceComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -13,15 +13,19 @@ describe('ProjectDetailComponent', () => {
         HttpClientTestingModule,
         RouterTestingModule
       ],
-      declarations: [ ProjectDetailComponent ]
+      declarations: [ PreferenceComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProjectDetailComponent);
+    fixture = TestBed.createComponent(PreferenceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });
+

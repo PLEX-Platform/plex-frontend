@@ -1,6 +1,6 @@
-import { collaborator } from './collaborator';
+import { collaborator } from '../models/collaborator';
 import { projectuploader } from './projectuploader';
-import { like } from './like';
+import { like } from '../models/like';
 import { category } from './category';
 import { projecticon } from './projecticon';
 

@@ -1,0 +1,31 @@
+<div class="row sideBar">
+  <div *ngIf= "playlist.length != 0; else emptyblock">
+    <div *ngFor="let project of playlist; let i=index">
+      <div class="col-lg-8">
+        {{project.name}}
+      </div>
+   
+      <div class="col-lg-4">
+        <button type="button" (click)="deleteProject(i)" class="btn removeFromPlaylistBtn"><i class="bi bi-file-excel"></i></button>
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary" on-click="postPlaylist()">Save playlist</button>
+  </div>
+  <ng-template #emptyblock>
+    <div class="col-md-12">
+      Add projects to the playlist!
+    </div>
+    <p class="placeholder-glow">
+      <span class="placeholder col-12"></span>
+    </p>
+    <p class="placeholder-glow">
+      <span class="placeholder col-12"></span>
+    </p>
+    <p class="placeholder-glow">
+      <span class="placeholder col-12"></span>
+    </p>
+    <p class="placeholder-glow">
+      <span class="placeholder col-12"></span>
+    </p>
+  </ng-template>
+</div>
