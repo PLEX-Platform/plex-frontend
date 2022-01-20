@@ -1,0 +1,43 @@
+  <div class="project-list-header">Project overview
+  </div>
+<ul class="projects">
+  <li *ngFor="let project of projectslist.results">
+    <div class="card shadow-0 "  style="background-color:#ffffff;">
+      <div class="card-header text-title">{{project.name}}
+        <button id="hat" on-click="addToPlaylist(project.id)" class="btn btn-primary">+</button>
+      </div>
+      <div class="card-body" (click)="openModal(project.id)">
+        <p class="card-text module line-clamp text-description">
+          {{project.shortDescription}}
+        </p>
+      </div>
+      <div class="bottom-wrapper card-footer ">
+        <div class="text-attributes">
+          <i class="far fa-heart"></i> {{project.likes.length}}
+        </div>
+
+        <div class="text-attributes">
+            <i class="fas fa-users"></i> {{project.collaborators.length}}
+        </div>
+
+        <div class="text-attributes">
+          <i class="far fa-clock"></i> {{project.created | date}}
+        </div>
+
+        <div class="text-attributes">
+          <i class="fas fa-user"></i> {{project.user.name}}
+        </div>
+        <button class ="btn-secondary bi bi-info-square" (click)="openModal(project.id)" >
+        </button>
+      </div>
+    </div>
+  </li>
+</ul>
+<br/>
+<div class="btn-group">
+  <button  class="button" *ngIf = "(projectslist.page > 2)" [disabled] = "false" (click)="toPage(1)"><<</button>
+  <button  class="button" *ngIf = "(projectslist.page > 1)" [disabled] = "false" (click)="toPage(projectslist.page-1)">{{projectslist.page-1}}</button>
+  <button  class="button" (click)="toPage(projectslist.page)">{{projectslist.page}}</button>
+  <button  class="button" *ngIf = "(projectslist.page < projectslist.totalPages)" [disabled] = "false" (click)="toPage(projectslist.page+1)">{{projectslist.page+1}}</button>
+  <button  class="button" *ngIf = "(projectslist.page < projectslist.totalPages)" [disabled] = "false" (click)="toPage(projectslist.totalPages)">>></button>
+</div>

@@ -9,34 +9,39 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$S3PlexFrontend-primary: mat.define-palette(mat.$indigo-palette);
-$S3PlexFrontend-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
-// The warn palette is optional (defaults to red).
-$S3PlexFrontend-warn: mat.define-palette(mat.$red-palette);
 
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$S3PlexFrontend-theme: mat.define-light-theme((
-  color: (
-    primary: $S3PlexFrontend-primary,
-    accent: $S3PlexFrontend-accent,
-    warn: $S3PlexFrontend-warn,
-  )
-));
+// // Define the palettes for your theme using the Material Design palettes available in palette.scss
+// // (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// // hue. Available color palettes: https://material.io/design/color/
+// $S3PlexFrontend-primary: mat.define-palette(mat.$indigo-palette);
+// $S3PlexFrontend-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include mat.all-component-themes($S3PlexFrontend-theme);
+// // The warn palette is optional (defaults to red).
+// $S3PlexFrontend-warn: mat.define-palette(mat.$red-palette);
+
+// // Create the theme object. A theme consists of configurations for individual
+// // theming systems such as "color" or "typography".
+// $S3PlexFrontend-theme: mat.define-light-theme((
+//   color: (
+//     primary: $S3PlexFrontend-primary,
+//     accent: $S3PlexFrontend-accent,
+//     warn: $S3PlexFrontend-warn,
+//   )
+// ));
+
+// // Include theme styles for core and each component used in your app.
+// // Alternatively, you can import and @include the theme mixins for each component
+// // that you are using.
+// @include mat.all-component-themes($S3PlexFrontend-theme);
 
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+
 
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "~@fortawesome/fontawesome-free/scss/solid.scss"; 
@@ -45,8 +50,20 @@ $S3PlexFrontend-theme: mat.define-light-theme((
 /*importing font*/
 @import "https://fonts.googleapis.com/css?family=Montserrat:500,700";
 
-.html {
-  font-family: 'Montserrat';
-}
+// .html {
+// //  font-family: 'Montserrat';
+// }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+//Global variables for themes
+:root {
+  --background-primary-color: #7a7a7a;
+  --background-secondary-color: #313131;
+  --background-secondaryComponent-color: #2a2a2a;
+  --interactable-primary-color: #575757;
+  --interactable-secondary-color: #dfa92b;
+  --text-color: #ffffff;
+  --label-frontend: #5087d9;
+  --label-backend: #8751b0;
+}
